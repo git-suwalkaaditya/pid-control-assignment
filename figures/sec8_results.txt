@@ -1,0 +1,5 @@
+Ku (sim) = 7.988  (theory 8)
+Pu (sim) = 3.630 s (theory 2*pi/sqrt(3) = 3.628 s)
+Z-N classic (0.6Ku, Pu/2, Pu/8)          Kp=4.793 Ki=2.641 Kd=2.175 D_on_meas=False |                              rise= 0.951s  OS= 52.44%  settle= 9.910s  final= 1.0000m  ess=   -0.04mm
+Step A: Z-N with Ki cut to 0.8           Kp=4.793 Ki=0.800 Kd=2.175 D_on_meas=False |                              rise= 1.129s  OS= 17.30%  settle= 8.896s  final= 0.9988m  ess=    1.21mm
+Improved: Kp=4, Ki=0.8, Kd=3             Kp=4.000 Ki=0.800 Kd=3.000 D_on_meas=True |                              rise= 1.460s  OS=  3.02%  settle= 3.392s  final= 1.0003m  ess=   -0.27mm

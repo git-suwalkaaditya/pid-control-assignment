@@ -1,0 +1,6 @@
+Gains: Kp=300.0 Ki=600.0 Kd=20.0, limit ±30.0 N, D filter tau=0.01 s, noise ±1 mm
+Final PID (all fixes)        rise= 0.408s  OS=  0.01%  settle= 0.782s  final= 0.9999m  ess=    0.06mm
+Same gains, no fixes         rise= 0.396s  OS= 31.49%  settle= 2.222s  final= 1.0035m  ess=   -3.53mm
+All fixes but Ki=200         rise= 0.403s  OS=  0.05%  settle= 1.388s  final= 0.9890m  ess=   11.05mm  (error at t=1 s: 40.0 mm vs 11.3 mm)
+Final PID: force std after settling = 1.27 N (no fixes: 11.37 N)
+Final PID: final force = 20.00 N (theory k*x = 20 N)

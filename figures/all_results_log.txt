@@ -1,0 +1,68 @@
+
+===== sec1_loop_diagram.py =====
+saved /home/claude/pid-assignment/figures/fig01_loop.png
+
+===== sec4_metrics.py =====
+saved /home/claude/pid-assignment/figures/fig04_metrics.png
+Sec4 example                 rise= 0.100s  OS= 12.64%  settle= 0.332s  final= 0.9991m  ess=    0.87mm
+
+===== sec5_each_part.py =====
+saved /home/claude/pid-assignment/figures/fig05a_P_only.png
+saved /home/claude/pid-assignment/figures/fig05b_PI.png
+saved /home/claude/pid-assignment/figures/fig05c_PD.png
+P only: theory vs simulation
+Kp=  20 final theory=0.5000 sim=0.5000 | zeta=0.791 OS theory= 1.73% sim= 1.76% | rise=0.384s settle=0.582s
+Kp=  50 final theory=0.7143 sim=0.7149 | zeta=0.598 OS theory= 9.62% sim= 9.62% | rise=0.221s settle=0.707s
+Kp= 100 final theory=0.8333 sim=0.8331 | zeta=0.456 OS theory=19.96% sim=20.19% | rise=0.142s settle=0.760s
+Kp= 300 final theory=0.9375 sim=0.9368 | zeta=0.280 OS theory=40.07% sim=40.77% | rise=0.072s settle=0.774s
+PI (Kp=300)
+PI Ki=0                      rise= 0.072s  OS= 40.67%  settle= 0.776s  final= 0.9375m  ess=   62.50mm
+PI Ki=100                    rise= 0.074s  OS= 37.37%  settle= 1.149s  final= 0.9786m  ess=   21.44mm
+PI Ki=300                    rise= 0.074s  OS= 39.72%  settle= 0.830s  final= 0.9978m  ess=    2.22mm
+PI Ki=600                    rise= 0.071s  OS= 46.61%  settle= 0.957s  final= 1.0000m  ess=    0.05mm
+PD (Kp=300): damping ratio zeta = (c+Kd)/(2*sqrt(k+Kp))
+Kd=  0 zeta=0.280                              rise= 0.072s  OS= 40.77%  settle= 0.774s  final= 0.9368m  ess=   63.15mm
+Kd= 10 zeta=0.559                              rise= 0.098s  OS= 12.12%  settle= 0.326s  final= 0.9375m  ess=   62.50mm
+Kd= 20 zeta=0.839                              rise= 0.146s  OS=  0.73%  settle= 0.229s  final= 0.9375m  ess=   62.50mm
+Kd= 30 zeta=1.118                              rise= 0.221s  OS=  0.00%  settle= 0.399s  final= 0.9375m  ess=   62.50mm
+
+===== sec6_compare.py =====
+saved /home/claude/pid-assignment/figures/fig06_compare.png
+P   (Kp=300)                 rise= 0.072s  OS= 40.67%  settle= 0.776s  final= 0.9375m  ess=   62.50mm
+PI  (Kp=300, Ki=200)         rise= 0.075s  OS= 37.21%  settle= 1.198s  final= 0.9980m  ess=    2.04mm
+PD  (Kp=300, Kd=20)          rise= 0.146s  OS=  0.73%  settle= 0.229s  final= 0.9375m  ess=   62.50mm
+PID (Kp=300, Ki=200, Kd=20)  rise= 0.153s  OS=  0.49%  settle= 0.242s  final= 0.9999m  ess=    0.07mm
+
+===== sec7_real_world.py =====
+saved /home/claude/pid-assignment/figures/fig07a_windup.png
+saved /home/claude/pid-assignment/figures/fig07b_noise.png
+saved /home/claude/pid-assignment/figures/fig07c_kick.png
+saved /home/claude/pid-assignment/figures/fig07d_sampling.png
+7a no anti-windup            rise= 0.397s  OS= 32.65%  settle= 2.179s  final= 1.0042m  ess=   -4.22mm
+7a anti-windup ON            rise= 0.406s  OS=  0.00%  settle= 0.798s  final= 0.9999m  ess=    0.14mm
+7b raw D                    force std (t>1s) = 17.36 N, peak-to-peak = 78.4 N, position std = 0.152 mm
+7b filtered D (τ=10 ms)     force std (t>1s) = 1.28 N, peak-to-peak = 5.6 N, position std = 0.135 mm
+7c D on error         peak force = 20300.2 N                               rise= 0.077s  OS=  2.47%  settle= 0.596s  final= 0.9866m  ess=   13.37mm
+7c D on measurement   peak force = 300.2 N                               rise= 0.153s  OS=  0.53%  settle= 0.241s  final= 0.9995m  ess=    0.46mm
+7d dt=   1 ms max|y|=   1.005                              rise= 0.153s  OS=  0.53%  settle= 0.241s  final= 0.9995m  ess=    0.46mm
+7d dt=  50 ms max|y|=   1.090                              rise= 0.075s  OS=  9.04%  settle= 0.722s  final= 0.9998m  ess=    0.22mm
+7d dt=  70 ms max|y|=   1.373                              rise= 0.071s  OS= 26.72%  settle= 2.000s  final= 1.0834m  ess=  -83.36mm
+7d dt=  80 ms max|y|=   2.350                              rise= 0.017s  OS=2133.32%  settle= 2.000s  final= 0.1052m  ess=  894.76mm
+
+===== sec8_ziegler_nichols.py =====
+saved /home/claude/pid-assignment/figures/fig08a_zn_ultimate.png
+saved /home/claude/pid-assignment/figures/fig08b_zn_step.png
+Ku (sim) = 7.988  (theory 8)
+Pu (sim) = 3.630 s (theory 2*pi/sqrt(3) = 3.628 s)
+Z-N classic (0.6Ku, Pu/2, Pu/8)          Kp=4.793 Ki=2.641 Kd=2.175 D_on_meas=False |                              rise= 0.951s  OS= 52.44%  settle= 9.910s  final= 1.0000m  ess=   -0.04mm
+Step A: Z-N with Ki cut to 0.8           Kp=4.793 Ki=0.800 Kd=2.175 D_on_meas=False |                              rise= 1.129s  OS= 17.30%  settle= 8.896s  final= 0.9988m  ess=    1.21mm
+Improved: Kp=4, Ki=0.8, Kd=3             Kp=4.000 Ki=0.800 Kd=3.000 D_on_meas=True |                              rise= 1.460s  OS=  3.02%  settle= 3.392s  final= 1.0003m  ess=   -0.27mm
+
+===== sec9_final_controller.py =====
+saved /home/claude/pid-assignment/figures/fig09_final.png
+Gains: Kp=300.0 Ki=600.0 Kd=20.0, limit ±30.0 N, D filter tau=0.01 s, noise ±1 mm
+Final PID (all fixes)        rise= 0.408s  OS=  0.01%  settle= 0.782s  final= 0.9999m  ess=    0.06mm
+Same gains, no fixes         rise= 0.396s  OS= 31.49%  settle= 2.222s  final= 1.0035m  ess=   -3.53mm
+All fixes but Ki=200         rise= 0.403s  OS=  0.05%  settle= 1.388s  final= 0.9890m  ess=   11.05mm  (error at t=1 s: 40.0 mm vs 11.3 mm)
+Final PID: force std after settling = 1.27 N (no fixes: 11.37 N)
+Final PID: final force = 20.00 N (theory k*x = 20 N)

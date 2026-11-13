@@ -1,0 +1,10 @@
+7a no anti-windup            rise= 0.397s  OS= 32.65%  settle= 2.179s  final= 1.0042m  ess=   -4.22mm
+7a anti-windup ON            rise= 0.406s  OS=  0.00%  settle= 0.798s  final= 0.9999m  ess=    0.14mm
+7b raw D                    force std (t>1s) = 17.36 N, peak-to-peak = 78.4 N, position std = 0.152 mm
+7b filtered D (τ=10 ms)     force std (t>1s) = 1.28 N, peak-to-peak = 5.6 N, position std = 0.135 mm
+7c D on error         peak force = 20300.2 N                               rise= 0.077s  OS=  2.47%  settle= 0.596s  final= 0.9866m  ess=   13.37mm
+7c D on measurement   peak force = 300.2 N                               rise= 0.153s  OS=  0.53%  settle= 0.241s  final= 0.9995m  ess=    0.46mm
+7d dt=   1 ms max|y|=   1.005                              rise= 0.153s  OS=  0.53%  settle= 0.241s  final= 0.9995m  ess=    0.46mm
+7d dt=  50 ms max|y|=   1.090                              rise= 0.075s  OS=  9.04%  settle= 0.722s  final= 0.9998m  ess=    0.22mm
+7d dt=  70 ms max|y|=   1.373                              rise= 0.071s  OS= 26.72%  settle= 2.000s  final= 1.0834m  ess=  -83.36mm
+7d dt=  80 ms max|y|=   2.350                              rise= 0.017s  OS=2133.32%  settle= 2.000s  final= 0.1052m  ess=  894.76mm

@@ -1,0 +1,4 @@
+P   (Kp=300)                 rise= 0.072s  OS= 40.67%  settle= 0.776s  final= 0.9375m  ess=   62.50mm
+PI  (Kp=300, Ki=200)         rise= 0.075s  OS= 37.21%  settle= 1.198s  final= 0.9980m  ess=    2.04mm
+PD  (Kp=300, Kd=20)          rise= 0.146s  OS=  0.73%  settle= 0.229s  final= 0.9375m  ess=   62.50mm
+PID (Kp=300, Ki=200, Kd=20)  rise= 0.153s  OS=  0.49%  settle= 0.242s  final= 0.9999m  ess=    0.07mm

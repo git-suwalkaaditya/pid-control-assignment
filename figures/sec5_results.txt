@@ -1,0 +1,15 @@
+P only: theory vs simulation
+Kp=  20 final theory=0.5000 sim=0.5000 | zeta=0.791 OS theory= 1.73% sim= 1.76% | rise=0.384s settle=0.582s
+Kp=  50 final theory=0.7143 sim=0.7149 | zeta=0.598 OS theory= 9.62% sim= 9.62% | rise=0.221s settle=0.707s
+Kp= 100 final theory=0.8333 sim=0.8331 | zeta=0.456 OS theory=19.96% sim=20.19% | rise=0.142s settle=0.760s
+Kp= 300 final theory=0.9375 sim=0.9368 | zeta=0.280 OS theory=40.07% sim=40.77% | rise=0.072s settle=0.774s
+PI (Kp=300)
+PI Ki=0                      rise= 0.072s  OS= 40.67%  settle= 0.776s  final= 0.9375m  ess=   62.50mm
+PI Ki=100                    rise= 0.074s  OS= 37.37%  settle= 1.149s  final= 0.9786m  ess=   21.44mm
+PI Ki=300                    rise= 0.074s  OS= 39.72%  settle= 0.830s  final= 0.9978m  ess=    2.22mm
+PI Ki=600                    rise= 0.071s  OS= 46.61%  settle= 0.957s  final= 1.0000m  ess=    0.05mm
+PD (Kp=300): damping ratio zeta = (c+Kd)/(2*sqrt(k+Kp))
+Kd=  0 zeta=0.280                              rise= 0.072s  OS= 40.77%  settle= 0.774s  final= 0.9368m  ess=   63.15mm
+Kd= 10 zeta=0.559                              rise= 0.098s  OS= 12.12%  settle= 0.326s  final= 0.9375m  ess=   62.50mm
+Kd= 20 zeta=0.839                              rise= 0.146s  OS=  0.73%  settle= 0.229s  final= 0.9375m  ess=   62.50mm
+Kd= 30 zeta=1.118                              rise= 0.221s  OS=  0.00%  settle= 0.399s  final= 0.9375m  ess=   62.50mm
